@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Recuperar senha - TicketNow</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="page"><section class="auth-page">
+<img class="auth-logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow">
+<form class="auth-box recovery-box" id="recoveryForm"><h1>RECUPERAR SENHA</h1>
+<div id="recoveryStep1"><p class="recovery-text">Digite seu e-mail ou CPF para iniciar a recuperação.</p>
+<div class="field"><label>E-mail ou CPF</label><input id="recoveryUser" required placeholder="Digite seu e-mail ou CPF"></div>
+<button class="btn" type="button" id="sendRecoveryCode">ENVIAR CÓDIGO</button></div>
+<div id="recoveryStep2" style="display:none"><p class="recovery-text">Digite o código de autenticação de 2 fatores recebido.</p>
+<div class="field"><label>Código de autenticação</label><input id="recoveryCode" inputmode="numeric" maxlength="6" placeholder="000000"></div>
+<div id="demoCode" class="demo-code"></div><button class="btn" type="button" id="verifyRecoveryCode">VERIFICAR CÓDIGO</button></div>
+<div id="recoveryStep3" style="display:none"><p class="recovery-text">Crie sua nova senha e confirme para finalizar.</p>
+<div class="field"><label>Nova senha</label><input id="newPassword" type="password" minlength="6" placeholder="Minimo: 1 maiuscula e 1 caracter especial"></div>
+<div class="field"><label>Confirmar nova senha</label><input id="confirmPassword" type="password" minlength="6" placeholder="Digite novamente a senha"></div>
+<div id="passwordMatchError" class="auth-error"></div><button class="btn" type="submit">CRIAR NOVA SENHA</button></div>
+<div id="recoveryMessage" class="recovery-message"></div><div class="auth-link"><a href="login.html">Voltar para entrar</a></div>
+</form></section></main><script src="script.js"></script></body></html>

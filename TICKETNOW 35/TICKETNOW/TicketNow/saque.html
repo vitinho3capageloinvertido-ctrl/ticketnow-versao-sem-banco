@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Retirar saldo - TicketNow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page">
+    <header class="header">
+      <img class="logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+        onclick="window.location.href='index.html'" style="cursor:pointer">
+      <nav class="nav">
+        <a href="index.html">EVENTOS</a><a href="index.html#categorias">CATEGORIAS</a><a href="sobrenos.html">SOBRE
+          NÓS</a>
+      </nav>
+      <div class="header-icons">
+        <a class="icon-btn bag-button" href="carrinho.html" aria-label="Sacola de compras"><span
+            class="bag-icon"></span><span class="bag-count">0</span></a>
+        <a class="icon-btn profile-button" href="login.html" aria-label="Minha conta"><span
+            class="profile-icon"></span></a>
+      </div>
+    </header>
+
+    <div class="content">
+      <a class="back" href="financeiro.html">←</a>
+      <section class="withdraw-page">
+        <div class="withdraw-header">
+          <span class="withdraw-icon">R$</span>
+          <div>
+            <h1>RETIRAR SALDO</h1>
+            <p>Transfira o saldo disponível para sua conta bancária.</p>
+          </div>
+        </div>
+
+        <div class="withdraw-balance">
+          <span>SALDO DISPONÍVEL</span>
+          <strong id="withdrawBalance">R$ 14.290,00</strong>
+        </div>
+
+        <form class="withdraw-form" id="withdrawForm">
+          <div class="field full-field">
+            <label>Valor que deseja sacar</label>
+            <input id="withdrawAmount" inputmode="decimal" required placeholder="Ex.: 500,00">
+            <small id="withdrawError" class="withdraw-error"></small>
+          </div>
+
+          <div class="withdraw-divider">DADOS DA CONTA BANCÁRIA</div>
+
+          <div class="form-grid">
+            <div class="field"><label>Nome do titular</label><input id="holderName" required
+                placeholder="Nome completo"></div>
+            <div class="field"><label>CPF</label><input id="holderDocument" required inputmode="numeric" pattern="[0-9]{11}" maxlength="11" placeholder="Digite os 11 numeros do CPF">
+            </div>
+            <div class="field"><label>Banco</label><input id="bankName" required placeholder="Nome do banco"></div>
+            <div class="field"><label>Agência</label><input id="bankAgency" required inputmode="numeric" placeholder="Somente numeros"></div>
+            <div class="field"><label>Conta</label><input id="bankAccount" required inputmode="numeric" placeholder="Somente numeros"></div>
+            <div class="field"><label>Tipo de conta</label><select id="accountType" required>
+                <option value="">Selecione</option>
+                <option>Conta corrente</option>
+                <option>Conta poupança</option>
+              </select></div>
+            <div class="field full"><label>Chave Pix</label><input id="pixKey" required
+                placeholder="CPF, e-mail, telefone ou chave aleatória"></div>
+          </div>
+
+          <div class="withdraw-security">Confira os dados antes de confirmar. O saque será encaminhado para a conta
+            informada.</div>
+          <button class="btn withdraw-submit" type="submit">CONFIRMAR SAQUE</button>
+        </form>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div><img class="footer-logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow">
+          <p>Sua plataforma de confiança para descobrir os melhores eventos e garantir seus ingressos.</p>
+        </div>
+        <div>
+          <h4>NAVEGAÇÃO</h4>
+          <p><a href="index.html">Eventos</a></p>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>AJUDA</h4>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>SIGA-NOS</h4>
+          <p>◎ @Ticketnowofc</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 ticketNow. Todos os direitos reservados</div>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Meu ingresso - TicketNow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+<header class="header">
+  <!-- IMAGEM: logo TicketNow do cabecalho -->
+  <img class="logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow" onclick="window.location.href='index.html'" style="cursor:pointer">
+  <nav class="nav"><a href="index.html">EVENTOS</a><a href="index.html#categorias">CATEGORIAS</a><a href="sobrenos.html">SOBRE NÓS</a></nav>
+  <div class="header-icons"><a class="icon-btn bag-button" href="carrinho.html" aria-label="Sacola de compras"><span class="bag-icon"></span><span class="bag-count">0</span></a><a class="icon-btn profile-button" href="login.html" aria-label="Minha conta"><span class="profile-icon"></span></a></div>
+</header>
+<div class="content">
+  <a class="back" href="meusingresso.html">←</a>
+  <div id="ticketView"></div>
+</div>
+<footer class="footer"><div class="footer-grid">
+<div><!-- IMAGEM: logo TicketNow do rodape --><img class="footer-logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow" onclick="window.location.href='index.html'" style="cursor:pointer"><p>Sua plataforma de confiança para descobrir os melhores eventos e garantir seus ingressos.</p></div>
+<div><h4>NAVEGAÇÃO</h4><p><a href="index.html">Eventos</a></p><p><a href="sobrenos.html">Sobre nós</a></p></div>
+<div><h4>AJUDA</h4><p><a href="sobrenos.html">Sobre nós</a></p></div>
+<div><h4>SIGA-NOS</h4><p>◎ @Ticketnowofc</p></div></div><div class="footer-bottom">© 2026 ticketNow. Todos os direitos reservados</div></footer>
+</main>
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+ const area=document.getElementById('ticketView');
+ let purchases=[]; try{purchases=JSON.parse(localStorage.getItem('ticketnow_purchases')||'[]')}catch(e){}
+ const params=new URLSearchParams(location.search);
+ let idx=Number(params.get('index'));
+ if(params.has('pedido')) idx=purchases.findIndex(x=>String(x.pedido)===params.get('pedido'));
+ const it=purchases[idx];
+ if(!it){area.innerHTML='<div class="no-tickets"><h1>INGRESSO NÃO ENCONTRADO</h1><p>Este ingresso não está disponível neste navegador. Sem servidor ou banco de dados, a validação não pode consultar compras em outro dispositivo.</p><a class="btn" href="meusingresso.html">MEUS INGRESSOS</a></div>';return}
+ const ev=EVENTS[it.evento]||EVENTS[1];
+ const order=it.pedido||('TN'+Date.now().toString().slice(-8));
+ const bought=new Date(it.compradoEm||it.dataCompra||Date.now());
+ const buyer=it.cliente||{};
+ const validationUrl=new URL('validar-ingresso.html?pedido='+encodeURIComponent(order),location.href).href;
+ const qrUrl='https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=8&data='+encodeURIComponent(validationUrl);
+ const esc=v=>String(v??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ area.innerHTML=`<article class="ticket-view">
+  <div class="ticket-view-head"><span class="label">INGRESSO DIGITAL · ${esc(it.status||'CONFIRMADO')}</span><h1>${esc(ev.nome)}</h1><p>Apresente este ingresso e o QR Code na entrada do evento.</p></div>
+  <div class="ticket-view-body">
+   <div class="ticket-event-image"><img src="${esc(ev.img)}" alt="${esc(ev.nome)}"></div>
+   <div class="ticket-data-grid">
+    <div><span>DATA DO EVENTO</span><strong>${esc(ev.data)}</strong></div><div><span>LOCAL</span><strong>${esc(ev.local)}</strong></div>
+    <div><span>SETOR</span><strong>${esc(it.setor)}</strong></div><div><span>QUANTIDADE</span><strong>${esc(it.qtd)}</strong></div>
+    <div><span>CLASSIFICAÇÃO</span><strong>${esc(ev.classificacao)}</strong></div><div><span>ABERTURA DOS PORTÕES</span><strong>${esc(ev.abertura)}</strong></div>
+    <div><span>DATA DA COMPRA</span><strong>${bought.toLocaleDateString('pt-BR')}</strong></div><div><span>HORA DA COMPRA</span><strong>${bought.toLocaleTimeString('pt-BR')}</strong></div>
+    <div><span>FORMA DE PAGAMENTO</span><strong>${esc((it.formaPagamento||'pix').toUpperCase())}</strong></div><div><span>VALOR DO PEDIDO</span><strong>${money(Number(it.totalCompra??(Number(it.preco||0)*Number(it.qtd||1)*1.07)))}</strong></div>
+   </div>
+   <section class="ticket-buyer"><h2>INFORMAÇÕES DO COMPRADOR</h2><p><b>Nome:</b> ${esc(buyer.nome||'Não informado')}</p><p><b>E-mail:</b> ${esc(buyer.email||'Não informado')}</p><p><b>CPF:</b> ${esc(buyer.cpf||'Não informado')}</p><p><b>Telefone:</b> ${esc(buyer.telefone||'Não informado')}</p></section>
+   <div class="ticket-qr-real"><img src="${qrUrl}" alt="QR Code para consultar o ingresso"><p>Escaneie para abrir a página de validação deste ingresso.</p></div>
+   <div class="ticket-number">Nº DO PEDIDO: ${esc(order)}</div>
+   <p class="ticket-validation-note">Este QR Code abre a página de consulta do ingresso quando o site estiver publicado. A validação centralizada em outros dispositivos exige servidor e banco de dados; neste projeto os dados ficam salvos apenas neste navegador.</p>
+  </div><div class="ticket-view-actions"><button class="btn" onclick="window.print()">IMPRIMIR INGRESSO</button><a class="btn" href="meusingresso.html">VOLTAR AOS MEUS INGRESSOS</a></div>
+ </article>`;
+});
+</script>
+</body>
+</html>

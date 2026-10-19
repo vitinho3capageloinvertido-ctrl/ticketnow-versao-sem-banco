@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Pix - TicketNow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page">
+    <header class="header">
+      <!-- IMAGEM: logo TicketNow do cabecalho -->
+      <img class="logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+        onclick="window.location.href='index.html'" style="cursor:pointer">
+      <nav class="nav">
+        <a href="index.html">EVENTOS</a>
+        <a href="index.html#categorias">CATEGORIAS</a>
+        <a href="sobrenos.html">SOBRE NÓS</a>
+      </nav>
+      <div class="header-icons">
+        <a class="icon-btn bag-button" href="carrinho.html" aria-label="Sacola de compras">
+          <span class="bag-icon" aria-hidden="true"></span><span class="bag-count">0</span>
+        </a>
+        <a class="icon-btn profile-button" href="login.html" aria-label="Minha conta">
+          <span class="profile-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+    </header>
+    <div class="content"><a class="back" href="pagamento.html" aria-label="Voltar para escolher a forma de pagamento" onclick="sessionStorage.setItem('ticketnow_return_to_payment','1')">←</a>
+      <div class="pix-card">
+        <img class="pix-page-logo" src="pix-logo-transparent.png" alt="Pix">
+        <h3 id="pixTotal" class="pix-total"></h3>
+        <div class="timer-wrap">
+          <div class="timer-text">Código expira em <span id="timer">10:00</span></div>
+          <div class="timer-bar">
+            <div class="timer-fill" id="timerFill"></div>
+          </div>
+        </div>
+        <!-- IMAGEM: coloque aqui o LINK do seu QR Code Pix -->
+        <div class="pix-code" id="pixCodeVisual">
+          <img src="https://i.imgur.com/dmFysvS.jpeg" alt="QR Code Pix">
+        </div>
+        <p id="pixCode" style="font-size:8px;color:#aaa;word-break:break-all">00020126580014BR.GOV.BCB.PIX</p><button
+          class="btn" id="copyPix" style="margin-top:12px">COPIAR CÓDIGO</button><button class="btn" id="paidPix"
+          style="margin-top:8px;display:block;margin-left:auto;margin-right:auto">JÁ PAGUEI</button>
+        <p style="font-size:8px;color:#777;margin-top:8px">Nº PEDIDO - 14221</p>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <!-- IMAGEM: logo TicketNow do rodape -->
+          <img class="footer-logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+            onclick="window.location.href='index.html'" style="cursor:pointer">
+          <p>Sua plataforma de confiança para descobrir os melhores eventos e garantir seus ingressos.</p>
+        </div>
+        <div>
+          <h4>NAVEGAÇÃO</h4>
+          <p><a href="index.html">Eventos</a></p>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>AJUDA</h4>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>SIGA-NOS</h4>
+          <p>◎ @Ticketnowofc</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 ticketNow. Todos os direitos reservados</div>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

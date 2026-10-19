@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>STAND UP COMEDY - TicketNow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page">
+    <header class="header">
+      <!-- IMAGEM: logo TicketNow do cabecalho -->
+      <img class="logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+        onclick="window.location.href='index.html'" style="cursor:pointer">
+      <nav class="nav">
+        <a href="index.html">EVENTOS</a>
+        <a href="index.html#categorias">CATEGORIAS</a>
+        <a href="sobrenos.html">SOBRE NÓS</a>
+      </nav>
+      <div class="header-icons">
+        <a class="icon-btn bag-button" href="carrinho.html" aria-label="Sacola de compras">
+          <span class="bag-icon" aria-hidden="true"></span><span class="bag-count">0</span>
+        </a>
+        <a class="icon-btn profile-button" href="login.html" aria-label="Minha conta">
+          <span class="profile-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+    </header>
+    <div class="content"><a class="back" href="index.html">←</a>
+      <section class="event-detail">
+        <div>
+          <div class="detail-image"><!-- IMAGEM: imagem principal do evento selecionado --><!-- IMAGEM: imagem principal do evento 2 - STAND UP COMEDY -->
+            <img id="eventImage" class="image-slot" src="https://i.imgur.com/V5hxTXH.jpeg" alt="STAND UP COMEDY"></div>
+          <div class="info-list"> Classificação: <b id="eventClass">+10</b><br> Duração: <b id="eventDuration">3 horas</b><br> Abertura dos portões: <b id="eventOpening">18:00</b></div>
+        </div>
+        <div class="detail-info">
+          <h1 id="eventName" data-static="1">STAND UP COMEDY</h1>
+          <div class="date"><b id="eventDate">22 SET</b> - <span id="eventLocal">PINHEIROS - SP</span></div>
+          <p id="eventDescription">Uma noite leve e divertida para reunir amigos, rir e aproveitar uma programacao de humor em um ambiente descontraido.</p>
+          <div class="price-box">INGRESSOS A PARTIR DE<strong id="eventPrice">R$ 89,90</strong><a class="btn" style="display:inline-block;margin-top:15px" id="goSector" href="setores.html?evento=2">VER INGRESSOS</a></div>
+        </div>
+      </section>
+      <section class="event-extra">
+        <div class="event-extra-box"><h3>POR QUE VIVER ESTA EXPERIENCIA?</h3><p>Prepare-se para uma experiencia completa, com ambiente pensado para o publico, acesso pratico e uma noite feita para ficar na memoria.</p></div>
+        <div class="event-extra-box"><h3>DESTAQUES DO EVENTO</h3><ul id="eventHighlights"><li>Humor e entretenimento ao vivo</li><li>Programacao para curtir com amigos</li><li>Abertura dos portoes as 18:00</li></ul></div>
+      </section>
+      <div class="map-box">
+        <h3>MAPA DO LOCAL</h3><!-- IMAGEM: mapa/localizacao especifico do evento selecionado -->
+        <div class="map-placeholder"><!-- IMAGEM: mapa/localizacao do evento 2 - STAND UP COMEDY -->
+          <a class="google-map-link" href="https://www.google.com/maps/search/?api=1&query=Pinheiros+Sao+Paulo" target="_blank" rel="noopener noreferrer" title="Abrir local no Google Maps"><img id="mapImage" class="image-slot" src="https://i.imgur.com/Ruqkpzj.png" alt="Mapa do STAND UP COMEDY"></a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <!-- IMAGEM: logo TicketNow do rodape -->
+          <img class="footer-logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+            onclick="window.location.href='index.html'" style="cursor:pointer">
+          <p>Sua plataforma de confiança para descobrir os melhores eventos e garantir seus ingressos.</p>
+        </div>
+        <div>
+          <h4>NAVEGAÇÃO</h4>
+          <p><a href="index.html">Eventos</a></p>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>AJUDA</h4>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>SIGA-NOS</h4>
+          <p>◎ @Ticketnowofc</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 ticketNow. Todos os direitos reservados</div>
+    </footer>
+  </main>
+  <script>window.DETALHE_EVENTO_ID = 2;</script>
+  <script src="script.js"></script>
+</body>
+
+</html>

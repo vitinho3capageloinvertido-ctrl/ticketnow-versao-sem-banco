@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>TicketNow - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="header">
+      <!-- IMAGEM: logo TicketNow do cabecalho -->
+      <img class="logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+        onclick="window.location.href='index.html'" style="cursor:pointer">
+      <nav class="nav">
+        <a href="index.html">EVENTOS</a>
+        <a href="index.html#categorias">CATEGORIAS</a>
+        <a href="sobrenos.html">SOBRE NÓS</a>
+        <a href="financeiro.html" class="finance-link manager-quick-access" id="managerQuickAccess">FINANCEIRO</a>
+      </nav>
+      <div class="header-icons">
+        <a class="icon-btn bag-button" href="carrinho.html" aria-label="Sacola de compras">
+          <span class="bag-icon" aria-hidden="true"></span><span class="bag-count">0</span>
+        </a>
+        <a class="icon-btn profile-button" href="login.html" aria-label="Minha conta">
+          <span class="profile-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <!-- IMAGEM: imagem grande de fundo atras da escrita SEU PROXIMO EVENTO -->
+      <img class="hero-image" src="https://i.imgur.com/Ivii7Jc.jpeg" alt="Imagem principal do evento">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>SEU PRÓXIMO<br>EVENTO. <span class="yellow">AGORA.</span></h1>
+        <p>Encontre os melhores eventos<br>e garanta o seu ingresso.</p>
+      </div>
+    </section>
+    <div class="feature-bar">
+      <div class="feature"><!-- IMAGEM: icone de variedade --><img class="feature-image"
+          src="https://i.imgur.com/BxpO0AU.png" alt="Variedade">
+        <div><b>VARIEDADE</b><br><span>Shows, festas, teatro, eventos e muito mais.</span></div>
+      </div>
+      <div class="feature"><!-- IMAGEM: icone dos melhores precos --><img class="feature-image"
+          src="https://i.imgur.com/lHkjijk.png" alt="Melhores precos">
+        <div><b>OS MELHORES PREÇOS</b><br><span>Compre o ingresso com as melhores ofertas.</span></div>
+      </div>
+      <div class="feature"><!-- IMAGEM: icone de ingresso digital --><img class="feature-image"
+          src="https://i.imgur.com/68NSd1E.png" alt="Ingresso digital">
+        <div><b>INGRESSO DIGITAL</b><br><span>Mais praticidade e ingresso 100% digital.</span></div>
+      </div>
+    </div>
+    <h2 class="section-title">EVENTOS EM DESTAQUE</h2>
+    <section class="events" id="categorias">
+      <article class="event-card">
+        <div class="event-img"><!-- IMAGEM: capa do evento SHOW NACIONAL --><img class="image-slot"
+            src="https://i.imgur.com/oIWvEEu.jpeg" alt="SHOW NACIONAL"></div>
+        <h3>SHOW NACIONAL</h3>
+        <p>20 SET - JD EUROPA - SP</p><a class="btn" href="detalhesevento1.html">VER</a>
+      </article>
+      <article class="event-card">
+        <div class="event-img"><!-- IMAGEM: capa do evento STAND UP COMEDY --><img class="image-slot"
+            src="https://i.imgur.com/hUmnZBS.jpeg" alt="STAND UP COMEDY"></div>
+        <h3>STAND UP COMEDY</h3>
+        <p>22 SET - PINHEIROS - SP</p><a class="btn" href="detalhesevento2.html">VER</a>
+      </article>
+      <article class="event-card">
+        <div class="event-img"><!-- IMAGEM: capa do evento MC IG --><img class="image-slot"
+            src="https://i.imgur.com/ZcefrRq.jpeg" alt="MC IG"></div>
+        <h3>MC IG</h3>
+        <p>20 OUT - BLUMENAU - SC</p><a class="btn" href="detalhesevento3.html">VER</a>
+      </article>
+      <article class="event-card">
+        <div class="event-img"><!-- IMAGEM: capa do evento TURMA DO PAGODE --><img class="image-slot"
+            src="https://i.imgur.com/U6wHhDt.jpeg" alt="TURMA DO PAGODE"></div>
+        <h3>TURMA DO PAGODE</h3>
+        <p>29 OUT - BARRA DA TIJUCA - RJ</p><a class="btn" href="detalhesevento4.html">VER</a>
+      </article>
+    </section>
+    <section class="banner">
+      <!-- IMAGEM: banner "leve os seus eventos no bolso" -->
+      <img class="banner-image" src="https://i.imgur.com/64eHGuC.png" alt="Banner TicketNow">
+      <div>
+        <h2>LEVE OS SEUS<br>EVENTOS NO <span class="yellow">BOLSO.</span></h2>
+        <p>Acesse o TicketNow e tenha os melhores eventos na palma da sua mão</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <!-- IMAGEM: logo TicketNow do rodape -->
+          <img class="footer-logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+            onclick="window.location.href='index.html'" style="cursor:pointer">
+          <p>Sua plataforma de confiança para descobrir os melhores eventos e garantir seus ingressos.</p>
+        </div>
+        <div>
+          <h4>NAVEGAÇÃO</h4>
+          <p><a href="index.html">Eventos</a></p>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>AJUDA</h4>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>SIGA-NOS</h4>
+          <p>◎ @Ticketnowofc</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 ticketNow. Todos os direitos reservados</div>
+    </footer>
+
+  </main>
+</body>
+
+</html>

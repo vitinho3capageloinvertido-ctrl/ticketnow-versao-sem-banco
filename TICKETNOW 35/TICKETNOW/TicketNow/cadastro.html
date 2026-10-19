@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Cadastro - TicketNow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="page">
+        <section class="auth-page">
+            <!-- IMAGEM: logo TicketNow grande da tela de cadastro -->
+            <img class="auth-logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+                onclick="window.location.href='index.html'" style="cursor:pointer">
+            <form class="auth-box" id="cadastroForm">
+                <h1>CRIAR CONTA</h1>
+                <div class="field"><label>Nome completo</label><input required placeholder="Nome"></div>
+                <div class="field"><label>E-mail</label><input type="email" required placeholder="E-mail"></div>
+                <div class="field"><label>CPF</label><input id="cadastroCpf" required inputmode="numeric" pattern="[0-9]{11}" maxlength="11" placeholder="Digite os 11 numeros do CPF"></div>
+                <div class="field"><label>Senha</label><input id="cadastroPassword" type="password" required minlength="6" placeholder="Minimo: 1 maiuscula e 1 caracter especial">
+                </div>
+                <button class="btn" type="submit">CADASTRAR</button>
+                <div class="auth-link">Já tem uma conta? <a href="login.html">Entrar</a></div>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

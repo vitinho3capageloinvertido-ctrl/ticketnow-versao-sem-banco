@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Pagamento - TicketNow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page">
+    <header class="header">
+      <!-- IMAGEM: logo TicketNow do cabecalho -->
+      <img class="logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+        onclick="window.location.href='index.html'" style="cursor:pointer">
+      <nav class="nav">
+        <a href="index.html">EVENTOS</a>
+        <a href="index.html#categorias">CATEGORIAS</a>
+        <a href="sobrenos.html">SOBRE NÓS</a>
+      </nav>
+      <div class="header-icons">
+        <a class="icon-btn bag-button" href="carrinho.html" aria-label="Sacola de compras">
+          <span class="bag-icon" aria-hidden="true"></span><span class="bag-count">0</span>
+        </a>
+        <a class="icon-btn profile-button" href="login.html" aria-label="Minha conta">
+          <span class="profile-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+    </header>
+    <div class="content"><a class="back" href="carrinho.html">←</a>
+      <section class="payment-layout">
+        <div class="payment-methods-panel">
+          <h3 class="payment-section-title">ESCOLHA O MEIO DE PAGAMENTO</h3>
+
+          <label class="payment-choice" role="radio">
+            <input type="radio" name="paymentMethod" value="pix">
+            <span class="payment-radio" aria-hidden="true"></span>
+            <span class="payment-choice-content">
+              <strong>PIX</strong>
+              <span class="payment-choice-logo">
+                <!-- IMAGEM: icone PIX de alta qualidade -->
+                <img class="payment-logo-image" src="pix-logo-transparent.png" alt="Pix">
+              </span>
+            </span>
+          </label>
+
+          <label class="payment-choice" role="radio">
+            <input type="radio" name="paymentMethod" value="card">
+            <span class="payment-radio" aria-hidden="true"></span>
+            <span class="payment-choice-content">
+              <strong>Cartão de crédito</strong>
+              <span class="payment-choice-logo card-logo-wrap" aria-label="Bandeiras aceitas">
+                <span class="card-brand visa-brand">VISA</span>
+                <span class="card-brand mastercard-brand"><i></i><i></i></span>
+                <span class="card-brand elo-brand">elo</span>
+                <span class="card-brand amex-brand">AMEX</span>
+              </span>
+            </span>
+          </label>
+
+          <button class="btn payment-continue" id="continuePayment" type="button" onclick="continuarPagamento(event)">CONTINUAR</button>
+          <div id="paymentMethodAlert" class="payment-method-alert"></div>
+        </div>
+
+        <div class="payment-summary-panel">
+          <h3 class="payment-section-title">RESUMO DO PEDIDO</h3>
+          <div id="paymentItems" class="payment-items"></div>
+          <div class="payment-total-row">
+            <span>TOTAL</span>
+            <strong id="paymentTotal"></strong>
+          </div>
+
+          <div class="client-data-block">
+            <h3 class="payment-section-title">DADOS DO CLIENTE</h3>
+            <form id="clientForm">
+              <div class="field"><label>Nome completo *</label><input required></div>
+              <div class="field"><label>CPF *</label><input id="clientCpf" required inputmode="numeric" pattern="[0-9]{11}" maxlength="11" placeholder="Digite os 11 numeros do CPF"></div>
+              <div class="field"><label>E-mail *</label><input type="email" required></div>
+              <div class="field"><label>Telefone *</label><input required></div>
+            </form>
+            <div id="paymentAlert" class="alert"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <!-- IMAGEM: logo TicketNow do rodape -->
+          <img class="footer-logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+            onclick="window.location.href='index.html'" style="cursor:pointer">
+          <p>Sua plataforma de confiança para descobrir os melhores eventos e garantir seus ingressos.</p>
+        </div>
+        <div>
+          <h4>NAVEGAÇÃO</h4>
+          <p><a href="index.html">Eventos</a></p>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>AJUDA</h4>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>SIGA-NOS</h4>
+          <p>◎ @Ticketnowofc</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 ticketNow. Todos os direitos reservados</div>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

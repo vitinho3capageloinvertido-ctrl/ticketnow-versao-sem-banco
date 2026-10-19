@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Carrinho - TicketNow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page">
+    <header class="header">
+      <!-- IMAGEM: logo TicketNow do cabecalho -->
+      <img class="logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+        onclick="window.location.href='index.html'" style="cursor:pointer">
+      <nav class="nav">
+        <a href="index.html">EVENTOS</a>
+        <a href="index.html#categorias">CATEGORIAS</a>
+        <a href="sobrenos.html">SOBRE NÓS</a>
+      </nav>
+      <div class="header-icons">
+        <a class="icon-btn bag-button" href="carrinho.html" aria-label="Sacola de compras">
+          <span class="bag-icon" aria-hidden="true"></span><span class="bag-count">0</span>
+        </a>
+        <a class="icon-btn profile-button" href="login.html" aria-label="Minha conta">
+          <span class="profile-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+    </header>
+    <div class="content"><a class="back" href="index.html">←</a>
+      <h3 style="font-size:12px;margin-bottom:20px"><span class="bag-icon title-bag"></span> &nbsp; SACOLA DE COMPRAS
+      </h3>
+      <section class="cart-layout">
+        <div>
+          <div id="cartItems"></div>
+          <div id="cartRecommendation"></div>
+        </div>
+        <aside class="summary">
+          <h3>RESUMO DO PEDIDO</h3>
+          <div class="sumline"><span>Total de ingressos</span><span id="sumQty"></span></div>
+          <div class="sumline"><span>Subtotal</span><span id="sumSub"></span></div>
+          <div class="sumline"><span>Taxa de serviço (7%)</span><span id="sumFee"></span></div>
+          <div class="sumtotal"><span>TOTAL A PAGAR</span><span id="sumTotal"></span></div><button class="btn"
+            id="toPayment">PROSSEGUIR PARA PAGAMENTO</button>
+        </aside>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <!-- IMAGEM: logo TicketNow do rodape -->
+          <img class="footer-logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+            onclick="window.location.href='index.html'" style="cursor:pointer">
+          <p>Sua plataforma de confiança para descobrir os melhores eventos e garantir seus ingressos.</p>
+        </div>
+        <div>
+          <h4>NAVEGAÇÃO</h4>
+          <p><a href="index.html">Eventos</a></p>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>AJUDA</h4>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>SIGA-NOS</h4>
+          <p>◎ @Ticketnowofc</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 ticketNow. Todos os direitos reservados</div>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

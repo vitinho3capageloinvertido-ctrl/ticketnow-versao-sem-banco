@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Entrar - TicketNow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="page">
+        <section class="auth-page">
+            <!-- IMAGEM: logo TicketNow grande da tela de login -->
+            <img class="auth-logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+                onclick="window.location.href='index.html'" style="cursor:pointer">
+            <form class="auth-box" id="loginForm">
+                <h1>ENTRAR</h1>
+                <div class="field"><label>E-mail ou CPF</label><input id="loginUser" required
+                        placeholder="Digite seu e-mail ou CPF"></div>
+                <div class="field"><label>Senha</label><input id="loginPass" type="password" required
+                        placeholder="Digite sua senha"></div>
+                <p class="forgot-password"><a href="recuperar-senha.html">Esqueci minha senha</a></p>
+                <button class="btn" type="submit">ENTRAR</button>
+                <div class="auth-link">Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></div>
+                <a class="btn admin-login-button" href="admin-login.html">ACESSO DO GERENTE / ADMINISTRADOR</a>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

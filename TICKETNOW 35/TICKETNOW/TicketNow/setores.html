@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Setores - TicketNow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page">
+    <header class="header">
+      <!-- IMAGEM: logo TicketNow do cabecalho -->
+      <img class="logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+        onclick="window.location.href='index.html'" style="cursor:pointer">
+      <nav class="nav">
+        <a href="index.html">EVENTOS</a>
+        <a href="index.html#categorias">CATEGORIAS</a>
+        <a href="sobrenos.html">SOBRE NÓS</a>
+      </nav>
+      <div class="header-icons">
+        <a class="icon-btn bag-button" href="carrinho.html" aria-label="Sacola de compras">
+          <span class="bag-icon" aria-hidden="true"></span><span class="bag-count">0</span>
+        </a>
+        <a class="icon-btn profile-button" href="login.html" aria-label="Minha conta">
+          <span class="profile-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+    </header>
+    <div class="content"><a class="back" href="javascript:history.back()">←</a>
+      <h3 style="font-size:11px;margin-bottom:10px">ESCOLHA O SEU SETOR</h3>
+      <!-- O JavaScript reconhece automaticamente o evento escolhido e carrega os dados corretos. -->
+      <section class="sector-layout">
+        <div class="sector-list" id="sectorList"></div>
+        <div class="map-stage"><!-- IMAGEM: mapa de setores do evento --><img class="image-slot" id="sectorMap"
+            src="https://i.imgur.com/dUAaRvb.jpeg" alt="Mapa dos setores"></div>
+      </section>
+      <div style="text-align:center;margin:20px"><button class="btn" id="continueCart">ADICIONAR AO CARRINHO</button>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <!-- IMAGEM: logo TicketNow do rodape -->
+          <img class="footer-logo" src="https://i.imgur.com/0fHau9X.png" alt="TicketNow"
+            onclick="window.location.href='index.html'" style="cursor:pointer">
+          <p>Sua plataforma de confiança para descobrir os melhores eventos e garantir seus ingressos.</p>
+        </div>
+        <div>
+          <h4>NAVEGAÇÃO</h4>
+          <p><a href="index.html">Eventos</a></p>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>AJUDA</h4>
+          <p><a href="sobrenos.html">Sobre nós</a></p>
+        </div>
+        <div>
+          <h4>SIGA-NOS</h4>
+          <p>◎ @Ticketnowofc</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 ticketNow. Todos os direitos reservados</div>
+    </footer>
+  </main>
+  <script>window.TICKET_EVENTS = { "1": { "nome": "SHOW NACIONAL", "data": "20 SET", "local": "JD EUROPA - SP", "preco": 89.9, "classificacao": "+16", "duracao": "8 horas", "abertura": "20:00", "img": "COLE_AQUI_O_LINK_DO_EVENTO_1" }, "2": { "nome": "STAND UP COMEDY", "data": "22 SET", "local": "PINHEIROS - SP", "preco": 89.9, "classificacao": "+10", "duracao": "3 horas", "abertura": "18:00", "img": "COLE_AQUI_O_LINK_DO_EVENTO_2" }, "3": { "nome": "MC IG", "data": "20 OUT", "local": "BLUMENAU - SC", "preco": 129.9, "classificacao": "+18", "duracao": "5 horas", "abertura": "19:00", "img": "COLE_AQUI_O_LINK_DO_EVENTO_3" }, "4": { "nome": "TURMA DO PAGODE", "data": "29 OUT", "local": "BARRA DA TIJUCA - RJ", "preco": 79.9, "classificacao": "+14", "duracao": "4 horas", "abertura": "18:00", "img": "COLE_AQUI_O_LINK_DO_EVENTO_4" } };</script>
+  <script src="script.js"></script>
+</body>
+
+</html>
